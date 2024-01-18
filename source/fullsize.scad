@@ -1,22 +1,28 @@
-$fn=50;
+// 変数の宣言
+$fn = 50;
+caloriemate_x = 106;
+caloriemate_y = 20;
+caloriemate_z = 100;
+clearance = 0.5;
 
 difference(){
 
 	// ベース部分
 	minkowski(){
 
-		sphere(r = 1);
+		// フィレットを付ける
+		sphere(r = 2);
 
-		cube([111, 25, 105], center = true);
+		cube([caloriemate_x + 4, caloriemate_y + 4, caloriemate_z + 4], center = true);
 
 	}
 
 	// 空洞部分
-	translate([0, 0, 5]){
+	 translate([0, 0, 5]){
 
-		cube([106, 20, 100], center = true);
+		cube([caloriemate_x + clearance, caloriemate_y + clearance, caloriemate_z], center = true);
 
-	}
+	 }
 
 	// 引き出し口
 	translate([0, 20, 106/2]){
