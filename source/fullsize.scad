@@ -5,7 +5,7 @@ $fn = 50;
 caloriemate_x = 106;
 caloriemate_y = 20;
 caloriemate_z = 100;
-clearance = 0.5;
+clearance = 0.7;
 
 difference(){
 
@@ -15,14 +15,14 @@ difference(){
 		// フィレットを付ける
 		sphere(r = 2);
 
-		cube([caloriemate_x + 5.2, caloriemate_y + 4, caloriemate_z + 4], center = true);
+		cube([caloriemate_x + 5.4, caloriemate_y + 4.2, caloriemate_z + 4], center = true);
 
 	}
 
 	// 空洞部分
 	 translate([0, 0, 5]){
 
-		cube([caloriemate_x + clearance + 1.2, caloriemate_y + clearance, caloriemate_z], center = true);
+		cube([caloriemate_x + clearance + 1, caloriemate_y + clearance, caloriemate_z], center = true);
 
 	 }
 
